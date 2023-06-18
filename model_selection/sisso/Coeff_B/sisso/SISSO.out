@@ -1,0 +1,229 @@
+****************************************************************
+  Sure Independence Screening and Sparsifying Operator (SISSO)  
+             Version SISSO.3.2, September, 2022.                
+****************************************************************
+
+Read in data from train.dat.
+Read in parameters from SISSO.in
+Property type:     1
+Number of tasks:        1
+Descriptor dimension:        7
+Number of samples for each task:       64
+Restarts :  0
+Number of scalar features:       50
+Tier of the feature space:        2
+Maximal feature complexity (number of operators in a feature):        3
+Units of the input primary features (each represented by a vector): 
+  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+The feature will be discarded if the minimum of the maximal abs. value in it <    0.10000E-02
+The faature will be discarded if the maximum of the maximal abs. value in it >     0.10000E+06
+Size of the SIS-selected (single) subspace :       40      40      40      40      40      40      40
+Operators for feature construction: (+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(cbrt)(log)(|-|) (+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(cbrt)(log)(|-|) 
+Fitting intercept:      T
+Metric for model selection: RMSE
+Method for sparse regression:  L0        
+Number of the top-ranked models to output:      100
+--------------------------------------------------------------------------------
+
+Dimension:   1
+-------------------
+Feature Construction (FC) starts ...
+Population Standard Deviation (SD) of task 001:    0.26488
+Total number of features in the space phi00:             50
+Total number of features in the space phi01:           1937
+Total number of features in the space phi02:        2660600
+Size of the SIS-selected subspace from phi02:         40
+Time (second) used for this FC:            7.88
+
+Descriptor Identification (DI) starts ...
+Total number of SIS-selected features from all iterations:         40
+  1D descriptor (model): 
+RMSE and MaxAE:   0.105768  0.282595
+@@@descriptor: 
+                      1:[((s_A*X_EA)+(s_X*A_EA))]
+       coefficients_001:    -0.5011092250E+00
+          Intercept_001:     0.7974283581E+00
+         RMSE,MaxAE_001:     0.1057684889E+00    0.2825951406E+00
+--------------------------------------------------------------------------------
+Time (second) used for this DI:            0.13
+
+Dimension:   2
+-------------------
+Feature Construction (FC) starts ...
+Total number of features in the space phi00:             50
+Total number of features in the space phi01:           1937
+Total number of features in the space phi02:        2660600
+Size of the SIS-selected subspace from phi02:         40
+Time (second) used for this FC:            1.55
+
+Descriptor Identification (DI) starts ...
+Total number of SIS-selected features from all iterations:         80
+  2D descriptor (model): 
+RMSE and MaxAE:   0.081363  0.250008
+@@@descriptor: 
+                      1:[((s_A*X_EA)+(s_X*A_EA))]
+                     47:[(exp(-B_Hf)-exp(-B_ChiP))]
+       coefficients_001:    -0.4553737740E+00   -0.4139633941E+00
+          Intercept_001:     0.8666112990E+00
+         RMSE,MaxAE_001:     0.8136333035E-01    0.2500083035E+00
+--------------------------------------------------------------------------------
+Time (second) used for this DI:            0.18
+
+Dimension:   3
+-------------------
+Feature Construction (FC) starts ...
+Total number of features in the space phi00:             50
+Total number of features in the space phi01:           1937
+Total number of features in the space phi02:        2660600
+Size of the SIS-selected subspace from phi02:         40
+Time (second) used for this FC:            1.32
+
+Descriptor Identification (DI) starts ...
+Total number of SIS-selected features from all iterations:        120
+  3D descriptor (model): 
+RMSE and MaxAE:   0.065226  0.202054
+@@@descriptor: 
+                      5:[(cbrt(X_Z)*(s_A*X_EA))]
+                     68:[((B_G)^3*(B_Ra-std_A2X))]
+                    120:[((X_Kappa*mean_A2B)/(mean_X2X-std_X2X))]
+       coefficients_001:    -0.8551895680E+00   -0.4308096310E+00    0.6219751979E-01
+          Intercept_001:     0.7492318291E+00
+         RMSE,MaxAE_001:     0.6522622454E-01    0.2020539060E+00
+--------------------------------------------------------------------------------
+Time (second) used for this DI:            0.24
+
+Dimension:   4
+-------------------
+Feature Construction (FC) starts ...
+Total number of features in the space phi00:             50
+Total number of features in the space phi01:           1937
+Total number of features in the space phi02:        2660600
+Size of the SIS-selected subspace from phi02:         40
+Time (second) used for this FC:            1.21
+
+Descriptor Identification (DI) starts ...
+Total number of SIS-selected features from all iterations:        160
+  4D descriptor (model): 
+RMSE and MaxAE:   0.047379  0.152235
+@@@descriptor: 
+                      5:[(cbrt(X_Z)*(s_A*X_EA))]
+                     68:[((B_G)^3*(B_Ra-std_A2X))]
+                    120:[((X_Kappa*mean_A2B)/(mean_X2X-std_X2X))]
+                    121:[((mean_B2X)^2*cbrt(A_Rvdw))]
+       coefficients_001:    -0.8085228978E+00   -0.4831552227E+00    0.5142142840E-01   -0.2610460433E+00
+          Intercept_001:     0.7979200141E+00
+         RMSE,MaxAE_001:     0.4737939571E-01    0.1522345551E+00
+--------------------------------------------------------------------------------
+Time (second) used for this DI:            0.90
+
+Dimension:   5
+-------------------
+Feature Construction (FC) starts ...
+Total number of features in the space phi00:             50
+Total number of features in the space phi01:           1937
+Total number of features in the space phi02:        2660600
+Size of the SIS-selected subspace from phi02:         40
+Time (second) used for this FC:            1.14
+
+Descriptor Identification (DI) starts ...
+Total number of SIS-selected features from all iterations:        200
+  5D descriptor (model): 
+RMSE and MaxAE:   0.041357  0.127460
+@@@descriptor: 
+                      5:[(cbrt(X_Z)*(s_A*X_EA))]
+                     68:[((B_G)^3*(B_Ra-std_A2X))]
+                    120:[((X_Kappa*mean_A2B)/(mean_X2X-std_X2X))]
+                    123:[abs((mean_A2X+mean_B2X)-abs(A_Rvdw-std_B2X))]
+                    161:[((s_B*B_Hf)*cbrt(B_CvM))]
+       coefficients_001:    -0.8411009828E+00   -0.4821199690E+00    0.5320882626E-01   -0.1358117102E+00    0.2161067576E+01
+          Intercept_001:     0.7959868346E+00
+         RMSE,MaxAE_001:     0.4135709055E-01    0.1274595789E+00
+--------------------------------------------------------------------------------
+Time (second) used for this DI:           89.49
+
+Dimension:   6
+-------------------
+Feature Construction (FC) starts ...
+Total number of features in the space phi00:             50
+Total number of features in the space phi01:           1937
+Total number of features in the space phi02:        2660600
+Size of the SIS-selected subspace from phi02:         40
+Time (second) used for this FC:            1.17
+
+Descriptor Identification (DI) starts ...
+Total number of SIS-selected features from all iterations:        240
+  6D descriptor (model): 
+RMSE and MaxAE:   0.034503  0.117829
+@@@descriptor: 
+                      5:[(cbrt(X_Z)*(s_A*X_EA))]
+                     68:[((B_G)^3*(B_Ra-std_A2X))]
+                    120:[((X_Kappa*mean_A2B)/(mean_X2X-std_X2X))]
+                    123:[abs((mean_A2X+mean_B2X)-abs(A_Rvdw-std_B2X))]
+                    179:[((B_Hf*B_Ra)*cbrt(B_CvM))]
+                    209:[((A_G-B_G)*(B_EA*A_Rho))]
+       coefficients_001:    -0.8346720158E+00   -0.5091686077E+00    0.5450959415E-01   -0.1597500892E+00    0.1996117867E+01   -0.1527686466E+01
+          Intercept_001:     0.7927052109E+00
+         RMSE,MaxAE_001:     0.3450265861E-01    0.1178286792E+00
+--------------------------------------------------------------------------------
+Time (second) used for this DI:        10718.93
+
+Dimension:   7
+-------------------
+Feature Construction (FC) starts ...
+Total number of features in the space phi00:             50
+Total number of features in the space phi01:           1937
+Total number of features in the space phi02:        2660600
+Size of the SIS-selected subspace from phi02:         40
+Time (second) used for this FC:            1.35
+
+Descriptor Identification (DI) starts ...
+Total number of SIS-selected features from all iterations:        280

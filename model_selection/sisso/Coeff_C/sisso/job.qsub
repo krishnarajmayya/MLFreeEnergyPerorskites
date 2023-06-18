@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -N sisso
+#PBS -q giga_parallel
+#PBS -l nodes=4:ppn=32
+#PBS -V
+
+cd $PBS_O_WORKDIR
+cat $PBS_NODEFILE > pbs_nodes
+echo Working directory is $PBS_O_WORKDIR
+
+NPROCS=`wc -l < $PBS_NODEFILE`
+NNODES=`uniq $PBS_NODEFILE | wc -l`
+
+### Display the job context
+echo Running on host `hostname`
+echo Time is `date`
+echo Directory is `pwd`
+echo Using ${NPROCS} processors across ${NNODES} nodes
+
+
+MPIRUN=/apps/intel_2019/compilers_and_libraries_2019.5.281/linux/mpi/intel64/bin/mpirun
+
+${MPIRUN} -n ${NPROCS} /home/krish/codes/SISSO_new/SISSO >> log
