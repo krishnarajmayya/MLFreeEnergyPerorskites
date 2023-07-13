@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['compounds_data/combine_fitting_coeffs.py']
+recent_files = ['final_models/Coeff_D/predict_Coeff_D.py']
 
 [main]
 version = 0.2.0
