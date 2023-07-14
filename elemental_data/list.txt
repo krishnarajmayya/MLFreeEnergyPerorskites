@@ -1,0 +1,1 @@
+Ac,Ag,Al,As,Ba,B,Be,Bi,Ca,Cd,Ce,C,Co,Cr,Cs,Cu,Dy,Er,Eu,Fe,Ga,Gd,Ge,Hf,Ho,In,K,La,Li,Lu,Mg,Mn,Mo,Na,Nb,Nd,Ni,Np,Os,Pa,Pb,P,Pd,Pm,Pr,Pu,Rb,Re,Rh,Ru,Sb,Sc,Si,Sm,Sn,Sr,Ta,Tb,Tc,Th,Ti,Tl,Tm,U,V,Y,Yb,Zn,Zr,Au,Br,Cl,I,Ir,Pt,S,Se,W,F,H,N,O

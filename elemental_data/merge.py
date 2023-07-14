@@ -12,10 +12,10 @@ import pandas as pd
 df1 = pd.read_csv('elements.csv')
 
 # Read the second CSV file into another data frame
-df2 = pd.read_csv('elements_energy.csv')
+df2 = pd.read_csv('energy.csv')
 
 # Perform an outer merge
 merged_df = pd.merge(df1, df2, on='Name', how='outer')
 
 # Print the merged data frame
-merged_df.to_csv('elements_merged.csv', index=False)
+merged_df.to_csv('elements_all.csv', index=False)
