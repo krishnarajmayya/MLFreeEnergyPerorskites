@@ -1,3 +1,3 @@
-material_id,Name,A_site,B_site,X_site,Spacegroup,Ehull,Energy,nsites,density_MP
-mp-1183115,AcAlO3,Ac,Al,O,Pm-3m,0,-39.09924288,5,8.54677368663323
-mp-1183052,AcBO3,Ac,B,O,Pm-3m,0.792472744666666,-35.95268513,5,9.20687860674916
+material_id,Name,A_site,B_site,X_site,Spacegroup,Ehull,Energy,density_MP
+mp-1183115,AcAlO3,Ac,Al,O,Pm-3m,0,-39.09924288,8.54677368663323
+mp-1183052,AcBO3,Ac,B,O,Pm-3m,0.792472744666666,-35.95268513,9.20687860674916
